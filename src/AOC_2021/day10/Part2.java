@@ -1,7 +1,6 @@
 package AOC_2021.day10;
 
 import AOC_Helper_Classes.*;
-
 import java.math.BigInteger;
 import java.util.Arrays;
 
@@ -23,7 +22,6 @@ public class Part2 {
             numbers2[a] = numbers[a];
         }
         Arrays.sort(numbers2);
-        //System.out.println(Arrays.toString(numbers2));
         System.out.println(numbers2[numbers2.length/2]);
     }
     public static boolean openClose(char c){
@@ -41,7 +39,6 @@ public class Part2 {
         char[] opens = new char[100];
         int current = 0;
         for (String a:c.split("")){
-            //System.out.println(Arrays.toString(opens));
             if (openClose(a.charAt(0))){
                 opens[current] = a.charAt(0);
                 current++;
@@ -62,25 +59,20 @@ public class Part2 {
             }
         }
         for (int i=len-1;i>=0;i--){
-            //System.out.println(opens[i]);
             switch (opens[i]){
                 case '(':
-                    //System.out.println(")");
                     total = total.multiply(new BigInteger("5"));
                     total = total.add(new BigInteger("1"));
                     break;
                 case '[':
-                    //System.out.println("]");
                     total = total.multiply(new BigInteger("5"));
                     total = total.add(new BigInteger("2"));
                     break;
                 case '{':
-                    //System.out.println("}");
                     total = total.multiply(new BigInteger("5"));
                     total = total.add(new BigInteger("3"));
                     break;
                 case '<':
-                    //System.out.println(">");
                     total = total.multiply(new BigInteger("5"));
                     total = total.add(new BigInteger("4"));
                     break;
@@ -88,7 +80,6 @@ public class Part2 {
                     break;
             }
         }
-        //System.out.println(total);
         return total;
     }
 }
