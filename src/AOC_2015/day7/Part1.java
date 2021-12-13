@@ -1,7 +1,6 @@
 package AOC_2015.day7;
 
 import AOC_Helper_Classes.*;
-
 import java.util.Arrays;
 
 public class Part1 {
